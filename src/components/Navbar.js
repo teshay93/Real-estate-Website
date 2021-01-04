@@ -10,8 +10,8 @@ const Navbar = () => {
     return (
         <Nav>
             <h1>Navbar</h1>
-        </Nav>
-    )
+        </Nav> 
+    )  
 }
 
 export default Navbar
