@@ -13,7 +13,7 @@ const Nav = styled.nav`
   z-index: 100;
   position: fixed;
   width: 100%;
-  background: red;
+  background: blueviolet;
 `;
 
 const NavLink = css`
@@ -65,7 +65,7 @@ const NavBtn = styled.div`
 const Navbar = () => {
   return (
     <Nav>
-      <Logo to="/">Elixir</Logo>
+      <Logo to="/">P.S. Estates</Logo>
       <MenuBars />
       <NavMenu>
         {menuData.map((item, index) => (

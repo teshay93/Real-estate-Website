@@ -5,7 +5,7 @@ import ImageThree from "../images/house-3.jpg";
 
 export const SliderData = [
     {
-        title: 'Luxury Villa',
+        title: 'Cali Suite',
         price: '$300,000',
         path: '/homes',
         label: 'View Home',
@@ -13,7 +13,7 @@ export const SliderData = [
         alt: 'Home'
     },
     {
-        title: 'Luxury Villa',
+        title: 'Condo Suite',
         price: '$300,000',
         path: '/homes',
         label: 'View Home',
@@ -21,7 +21,7 @@ export const SliderData = [
         alt: 'Home'
     },
     {
-        title: 'Luxury Villa',
+        title: 'Hills Suite',
         price: '$300,000',
         path: '/homes',
         label: 'View Home',
@@ -29,7 +29,7 @@ export const SliderData = [
         alt: 'Home'
     },
     {
-        title: 'Luxury Villa',
+        title: 'Hills Villa',
         price: '$300,000',
         path: '/homes',
         label: 'View Home',
