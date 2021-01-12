@@ -62,11 +62,11 @@ const NavBtn = styled.div`
   }
 `;
 
-const Navbar = () => {
+const Navbar = ({toggle}) => {
   return (
     <Nav>
       <Logo to="/">P.S. Estates</Logo>
-      <MenuBars />
+      <MenuBars onClick={toggle} />
       <NavMenu>
         {menuData.map((item, index) => (
           <NavMenuLinks to={item.link} key={index}>
@@ -75,8 +75,8 @@ const Navbar = () => {
         ))}
       </NavMenu>
       <NavBtn>
-        <Button to="/contact" primary="true">
-          Contact
+      <Button to='/contact' primary='true'>
+        Contact
         </Button>
       </NavBtn>
     </Nav>
