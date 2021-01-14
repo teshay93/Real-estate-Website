@@ -13,7 +13,8 @@ const Nav = styled.nav`
   z-index: 100;
   position: fixed;
   width: 100%;
-  background: blueviolet;
+  background: #b96fec;
+  opacity: 0.8;
 `;
 
 const NavLink = css`

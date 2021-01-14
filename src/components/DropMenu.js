@@ -27,7 +27,7 @@ grid-template-rows: repeat(4, 80px);
 text-align: center;
 margin-bottom: 4rem;
 
-@media
+
 `;
 
 const DropWrapper = styled.div``;

@@ -4,6 +4,8 @@ import Slider from './components/Slider';
 import { SliderData } from './data/SliderData';
 import GlobalStyle from './GlobalStyles';
 import DropMenu from './components/DropMenu';
+import Content from './components/Content';
+import { InfoData } from './data/InfoData';
 
 
 
@@ -18,6 +20,7 @@ function App() {
    <Navbar toggle={toggle}/>
    <DropMenu isOpen={isOpen} toggle={toggle}/>
    <Slider slides={SliderData} />
+   <Content {...InfoData}/>
    </>
   );
 }

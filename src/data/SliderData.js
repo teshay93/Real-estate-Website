@@ -16,7 +16,7 @@ export const SliderData = [
     },
     {
         title: 'Condo Suite',
-        price: '$300,000',
+        price: '$400,000',
         path: '/homes',
         label: 'View Home',
         image: ImageTwo,
@@ -24,7 +24,7 @@ export const SliderData = [
     },
     {
         title: 'Hills Suite',
-        price: '$300,000',
+        price: '$500,000',
         path: '/homes',
         label: 'View Home',
         image: ImageThree,
@@ -32,7 +32,7 @@ export const SliderData = [
     },
     {
         title: 'Hills Villa',
-        price: '$300,000',
+        price: '$600,000',
         path: '/homes',
         label: 'View Home',
         image: ImageFour,

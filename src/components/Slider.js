@@ -1,8 +1,18 @@
 import React, { useState, useRef, useEffect } from "react";
 import styled, { css } from "styled-components/macro";
 import { IoMdArrowForward } from "react-icons/io";
-import { Button } from "./Button";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
+
+const Button = styled.div`
+  text-decoration: none;
+  padding: 10px 40px;
+  border-radius: 30px;
+  background-color: #B96FEC;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0.9;
+`;
 
 const SliderSection = styled.section`
   height: 100vh;
@@ -46,7 +56,7 @@ const HomeSlider = styled.div`
     bottom: 0vh;
     left: 0;
     overflow: hidden;
-    opacity: 0.4;
+    opacity: 0.5;
     background: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.2) 0%,
@@ -75,12 +85,13 @@ const HomeContent = styled.div`
   color: #fff;
 
   h1 {
-    font-size: clamp(1rem, 8vw, 3rem);
-    font-weight: 500;
+    font-size: clamp(1rem, 8vw, 2rem);
+    font-weight: 400;
     text-transform: uppercase;
-    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
     text-align: left;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
     margin-bottom: 0.8rem;
+   
   }
 
   p {
@@ -138,7 +149,7 @@ const Home = ({ slides }) => {
     const nextSlide = () => {
       setCurrent((current) => (current === length - 1 ? 0 : current + 1));
     };
-    timeout.current = setTimeout(nextSlide, 3000);
+    timeout.current = setTimeout(nextSlide, 4000);
 
     return function () {
       if (timeout.current) {
@@ -147,22 +158,22 @@ const Home = ({ slides }) => {
     };
   }, [current, length]);
 
+  //NEXT SLIDE BUTTON 
   const nextSlide = () => {
     if (timeout.current) {
       clearTimeout(timeout.current);
     }
 
     setCurrent(current === length - 1 ? 0 : current + 1);
-    // console.log(current);
   };
 
+  //PREV SLIDE BUTTON
   const prevSlide = () => {
     if (timeout.current) {
       clearTimeout(timeout.current);
     }
 
-    setCurrent(current === 0 ? length - 1 : current - 1);
-    // console.log(current)
+    setCurrent(current === 0 ? length - 1 : current - 1);  
   };
 
   if (!Array.isArray(slides) || slides.length <= 0) {
@@ -182,13 +193,7 @@ const Home = ({ slides }) => {
                     <HomeContent>
                       <h1>{slide.title}</h1>
                       <p>{slide.price}</p>
-                      <Button
-                        to={slide.path}
-                        primary="true"
-                        css={`
-                          max-width: 160px;
-                        `}
-                      >
+                      <Button to={slide.path}>
                         {slide.label}
                         <Arrow />
                       </Button>
